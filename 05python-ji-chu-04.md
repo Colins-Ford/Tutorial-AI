@@ -1,4 +1,4 @@
-# 05-Python基础\(运算符\)
+# 2.5 Python基础\(运算符\)
 
 ## Python运算符
 
@@ -237,16 +237,84 @@ Python语言支持以下类型的运算符:
   ~a  = 1100 0011
 ```
 
-| 运算符 | 描述 | 实例 |
-| :---: | :---: | :---: |
-| & | 按位与运算符：参与运算的两个值，如果两个相应位都为1，则该位的结果为1，否则为0 | \(a & b\) 输出结果 12 二进制解释： 0000 1100 |
-| \| | 按位或运算符：只要对应的二个二进位有一个为1时，结果位就为1。 | \(a \| b\) 输出结果 61 二进制解释： 0011 1101 |
-| ^ | 按位异或运算符：当两对应的二进位相异时，结果为1 | \(a ^ b\) 输出结果 49 二进制解释： 0011 0001 |
-| ~ | 按位取反运算符：对数据的每个二进制位取反,即把1变为0，把0变为1。~x 类似于 -x-1 | \(~a \) 输出结果 -61 二进制解释： 1100 0011在一个有符号二进制数的补码形式。 |
-| &lt;&lt; | 左移动运算符：运算数的各二进位全部左移若干位，由"&lt;&lt;"右边的数指定移动的位数，高位丢弃，低位补0。 | a &lt;&lt; 2 输出结果 240 二进制解释： 1111 0000 |
-| &gt;&gt; | 右移动运算符：把"&gt;&gt;"左边的运算数的各二进位全部右移若干位，"&gt;&gt;"右边的数指定移动的位数 | a &gt;&gt; 2 输出结果 15 二进制解释： 0000 1111 |
-
-以下实例演示了Python所有位运算符的操作：
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:center">运算符</th>
+      <th style="text-align:center">描述</th>
+      <th style="text-align:center">实例</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:center">&</td>
+      <td style="text-align:center">
+        <p>按位与运算符：</p>
+        <p>参与运算的两个值，如果两个相应位都为1，</p>
+        <p>则该位的结果为1，否则为0</p>
+      </td>
+      <td style="text-align:center">
+        <p>(a & b) 输出结果 12</p>
+        <p>二进制解释： 0000 1100</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:center">|</td>
+      <td style="text-align:center">
+        <p>按位或运算符：</p>
+        <p>只要对应的二个二进位有一个为1时，结果位就为1。</p>
+      </td>
+      <td style="text-align:center">
+        <p>(a | b) 输出结果 61</p>
+        <p>二进制解释： 0011 1101</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:center">^</td>
+      <td style="text-align:center">
+        <p>按位异或运算符：</p>
+        <p>当两对应的二进位相异时，结果为1</p>
+      </td>
+      <td style="text-align:center">
+        <p>(a ^ b) 输出结果 49</p>
+        <p>二进制解释： 0011 0001</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:center">~</td>
+      <td style="text-align:center">
+        <p>按位取反运算符：</p>
+        <p>对数据的每个二进制位取反,即把1变为0，</p>
+        <p>把0变为1。~x 类似于 -x-1</p>
+      </td>
+      <td style="text-align:center">
+        <p>(~a ) 输出结果 -61</p>
+        <p>二进制解释： 1100 0011</p>
+        <p>在一个有符号二进制数的补码形式。</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:center">
+        <<</td>
+          <td style="text-align:center">
+            <p>左移动运算符：</p>
+            <p>运算数的各二进位全部左移若干位，</p>
+            <p>由"
+              << "右边的数指定移动的位数，高位丢弃，低位补0。</p></td>
+<td style="text-align:center "><p>a << 2 输出结果 240 </p><p>二进制解释： 1111 0000</p></td>
+</tr>
+<tr>
+<td style="text-align:center ">>></td>
+<td style="text-align:center "><p>右移动运算符：</p><p>把">>"左边的运算数的各二进位全部右移若干位，</p>
+            <p>">>"右边的数指定移动的位数</p>
+          </td>
+          <td style="text-align:center">
+            <p>a >> 2 输出结果 15</p>
+            <p>二进制解释： 0000 1111</p>
+          </td>
+    </tr>
+  </tbody>
+</table>以下实例演示了Python所有位运算符的操作：
 
 **实例**
 
@@ -291,13 +359,48 @@ Python语言支持以下类型的运算符:
 
 Python语言支持逻辑运算符，以下假设变量 a 为 10, b为 20:
 
-| 运算符 | 逻辑表达式 | 描述 | 实例 |
-| :---: | :---: | :---: | :---: |
-| and | x and y | 布尔"与"：如果 x 为 False，x and y 返回 False，否则它返回 y 的计算值。 | \(a and b\) 返回 20。 |
-| or | x or y | 布尔"或"：如果 x 是 True，它返回 x 的值，否则它返回 y 的计算值。 | \(a or b\) 返回 10。 |
-| not | not x | 布尔"非"：如果 x 为 True，返回 False 。如果 x 为 False，它返回 True。 | not\(a and b\) 返回 False |
-
-以上实例输出结果：
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:center">运算符</th>
+      <th style="text-align:center">逻辑表达式</th>
+      <th style="text-align:center">描述</th>
+      <th style="text-align:center">实例</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:center">and</td>
+      <td style="text-align:center">x and y</td>
+      <td style="text-align:center">
+        <p>布尔"与"：</p>
+        <p>如果 x 为 False，x and y 返回 False，</p>
+        <p>否则它返回 y 的计算值。</p>
+      </td>
+      <td style="text-align:center">(a and b) 返回 20。</td>
+    </tr>
+    <tr>
+      <td style="text-align:center">or</td>
+      <td style="text-align:center">x or y</td>
+      <td style="text-align:center">
+        <p>布尔"或"：</p>
+        <p>如果 x 是 True，它返回 x 的值，</p>
+        <p>否则它返回 y 的计算值。</p>
+      </td>
+      <td style="text-align:center">(a or b) 返回 10。</td>
+    </tr>
+    <tr>
+      <td style="text-align:center">not</td>
+      <td style="text-align:center">not x</td>
+      <td style="text-align:center">
+        <p>布尔"非"：</p>
+        <p>如果 x 为 True，返回 False 。</p>
+        <p>如果 x 为 False，它返回 True。</p>
+      </td>
+      <td style="text-align:center">not(a and b) 返回 False</td>
+    </tr>
+  </tbody>
+</table>以上实例输出结果：
 
 **实例**
 
@@ -349,12 +452,33 @@ Python语言支持逻辑运算符，以下假设变量 a 为 10, b为 20:
 
 除了以上的一些运算符之外，Python还支持成员运算符，测试实例中包含了一系列的成员，包括字符串，列表或元组。
 
-| 运算符 | 描述 | 实例 |
-| :---: | :---: | :---: |
-| in | 如果在指定的序列中找到值返回 True，否则返回 False。 | x 在 y 序列中 , 如果 x 在 y 序列中返回 True。 |
-| not in | 如果在指定的序列中没有找到值返回 True，否则返回 False。 | x 不在 y 序列中 , 如果 x 不在 y 序列中返回 True。 |
-
-以下实例演示了Python所有成员运算符的操作：
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:center">运算符</th>
+      <th style="text-align:center">描述</th>
+      <th style="text-align:center">实例</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:center">in</td>
+      <td style="text-align:center">
+        <p>如果在指定的序列中找到值返回 True，</p>
+        <p>否则返回 False。</p>
+      </td>
+      <td style="text-align:center">x 在 y 序列中 , 如果 x 在 y 序列中返回 True。</td>
+    </tr>
+    <tr>
+      <td style="text-align:center">not in</td>
+      <td style="text-align:center">
+        <p>如果在指定的序列中没有找到值返回 True，</p>
+        <p>否则返回 False。</p>
+      </td>
+      <td style="text-align:center">x 不在 y 序列中 , 如果 x 不在 y 序列中返回 True。</td>
+    </tr>
+  </tbody>
+</table>以下实例演示了Python所有成员运算符的操作：
 
 **实例**
 
@@ -395,12 +519,42 @@ Python语言支持逻辑运算符，以下假设变量 a 为 10, b为 20:
 
 身份运算符用于比较两个对象的存储单元
 
-| 运算符 | 描述 | 实例 |
-| :---: | :---: | :---: |
-| is | is 是判断两个标识符是不是引用自一个对象 | **x is y，**类似 **id\(x\) == id\(y\)。**如果引用的是同一个对象则返回 True，否则返回 False |
-| is not | is not 是判断两个标识符是不是引用自不同对象 | **x is not y，**类似 **id\(a\) != id\(b\)**。如果引用的不是同一个对象则返回结果 True，否则返回 False。 |
-
-**注：** id\(\) 函数用于获取对象内存地址。
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:center">运算符</th>
+      <th style="text-align:center">描述</th>
+      <th style="text-align:center">实例</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:center">is</td>
+      <td style="text-align:center">
+        <p>is 是判断两个标识符</p>
+        <p>是不是引用自一个对象</p>
+      </td>
+      <td style="text-align:center">
+        <p><b>x is y，</b>类似 <b>id(x) == id(y)。</b>
+        </p>
+        <p>如果引用的是同一个对象则返回 True，</p>
+        <p>否则返回 False</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:center">is not</td>
+      <td style="text-align:center">
+        <p>is not 是判断两个标识符</p>
+        <p>是不是引用自不同对象</p>
+      </td>
+      <td style="text-align:center">
+        <p><b>x is not y，</b>类似 <b>id(a) != id(b)</b>。</p>
+        <p>如果引用的不是同一个对象则返回结果 True，</p>
+        <p>否则返回 False。</p>
+      </td>
+    </tr>
+  </tbody>
+</table>**注：** id\(\) 函数用于获取对象内存地址。
 
 以下实例演示了Python所有身份运算符的操作：
 
