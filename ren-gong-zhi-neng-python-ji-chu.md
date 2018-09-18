@@ -1,6 +1,6 @@
 # 2.2 Python基础\(简介&编程模式&注释\)
 
-## Python 3 教程
+## Python 教程
 
 ![](http://www.runoob.com/wp-content/uploads/2014/05/python3.png)
 
@@ -8,7 +8,7 @@
 
 本教程主要针对Python 3版本的学习。
 
-## Python3 解释器
+## Python 解释器
 
 在Linux和Mac下对环境配置完成后，通过环境变量的配置，就可以通过 shell 终端输入下面的命令来启动 Python3 。
 

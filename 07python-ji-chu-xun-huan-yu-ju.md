@@ -1,6 +1,6 @@
 # 2.7 Python基础\(循环语句\)
 
-## Python3 循环语句
+## Python 循环语句
 
 Python中的循环语句有 for 和 while。 Python循环语句的控制结构图如下所示：
 
